@@ -40,9 +40,9 @@ export class FaceSnapsService {
     }
 
     getFaceSnapById(id:number): FaceSnap {
-        const faceSnap = this.faceSnaps.find(faceSnap => faceSnap.id === id);
+        const faceSnap = this.faceSnaps.find(faceSnap => faceSnap.id == id);
         if (!faceSnap) {
-            throw new Error('FaceSnap not found');
+            throw new Error('FaceSnap not found -> id = '+id);
         } else {
             return faceSnap;
         }
